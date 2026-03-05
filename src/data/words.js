@@ -1,0 +1,17 @@
+export const WORDS = [
+  'REACT',
+  'COMPONENT',
+  'JAVASCRIPT',
+  'PROTOTYPE',
+  'FUNCTION',
+  'DOCKER',
+  'VIRTUAL',
+  'INTERFACE',
+  'STATE',
+  'HOOK',
+  'OBJECT',
+  'VARIABLE',
+  'BROWSER',
+  'CONTAINER',
+  'CONTEXT',
+]

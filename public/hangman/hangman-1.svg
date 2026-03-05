@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220" role="img" aria-labelledby="title">
+  <title>Hangman stage 1</title>
+  <rect width="220" height="220" fill="#f8fafc" />
+  <line x1="20" y1="200" x2="180" y2="200" stroke="#0f172a" stroke-width="6" />
+  <line x1="60" y1="200" x2="60" y2="30" stroke="#0f172a" stroke-width="6" />
+  <line x1="60" y1="30" x2="140" y2="30" stroke="#0f172a" stroke-width="6" />
+  <line x1="140" y1="30" x2="140" y2="55" stroke="#0f172a" stroke-width="6" />
+  <circle cx="140" cy="75" r="20" fill="none" stroke="#0f172a" stroke-width="6" />
+</svg>

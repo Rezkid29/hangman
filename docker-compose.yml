@@ -1,0 +1,6 @@
+services:
+  hangman:
+    build: .
+    container_name: hangman-react
+    ports:
+      - "8080:80"
