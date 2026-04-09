@@ -1,0 +1,21 @@
+{
+  "name": "hangman-api",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.758.0",
+    "@aws-sdk/lib-dynamodb": "^3.758.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0",
+    "vitest": "^3.0.5"
+  }
+}
