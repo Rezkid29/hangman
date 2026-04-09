@@ -3,6 +3,12 @@ services:
     image: amazon/dynamodb-local:latest
     container_name: hangman-dynamodb
     command: "-jar DynamoDBLocal.jar -sharedDb -inMemory"
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O - http://localhost:8000/shell/ >/dev/null 2>&1 || exit 1"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+      start_period: 2s
     ports:
       - "8000:8000"
 
@@ -18,8 +24,10 @@ services:
       DYNAMODB_ENDPOINT: http://dynamodb-local:8000
       PLAYERS_TABLE: HangmanPlayers
       PORT: "3001"
+    restart: on-failure
     depends_on:
-      - dynamodb-local
+      dynamodb-local:
+        condition: service_healthy
 
   web:
     build:
@@ -32,4 +40,5 @@ services:
     ports:
       - "8080:80"
     depends_on:
-      - api
+      api:
+        condition: service_started
